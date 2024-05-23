@@ -1,0 +1,7 @@
+//OBTENER LA LISTA COMPLETA DE INSCRIPCIONES ESPECIFICANDO NOMBRE Y APELLIDO DE CADA UNO DE LOS INSCRITOS SIN DIFERENCIAR CATEGORIA
+SELECT participantes.id_participante, participantes.nombre, participantes.apellido, categorias.nombre, inscripciones.fecha_inscripcion
+FROM participantes
+INNER JOIN inscripciones
+ON participantes.id_participante = inscripciones.fk_participante
+INNER JOIN categorias
+ON categorias.id_categoria = inscripciones.fk_categoria;
