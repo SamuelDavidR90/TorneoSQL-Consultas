@@ -1,0 +1,8 @@
+
+SELECT p.nombre, p.apellido, c.nombre
+FROM participantes p
+INNER JOIN inscripciones i 
+ON p.id_participante = i.fk_participante
+INNER JOIN categorias c 
+ON c.id_categoria = i.fk_categoria
+WHERE (c.nombre = "Caballeros A" OR c.nombre = "Damas A");
